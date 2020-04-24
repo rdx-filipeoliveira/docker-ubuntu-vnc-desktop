@@ -78,8 +78,7 @@ RUN chmod +x /bin/tini
 
 # ffmpeg
 RUN apt update \
-    && apt install -y --no-install-recommends --allow-unauthenticated \
-        ffmpeg \
+    && apt install -y ffmpeg \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /usr/local/ffmpeg \
     && ln -s /usr/bin/ffmpeg /usr/local/ffmpeg/ffmpeg
